@@ -11,6 +11,7 @@
 html, body {
     margin : 0; /*기본웹사이트 body에 마진 8px가 있는데 그걸없애줌(보더테두리 밖 공간)*/
     padding: 0;
+    font-family: dotum,'돋움',helvetica,"Apple SD Gothic Neo",sans-serif; /*폰트설정, dotum이 없으면 그뒤 없으면 그뒤..순서로 적용됨*/
 }
 
 #fixed {
@@ -37,11 +38,33 @@ html, body {
 .center-align {
     margin: 0 auto;
     width: 1080px;
+    display: inline-block;
 }
+
+header {
+    height: 150px; /*네이버검색창과 메일 카페 블로그... 의 윗간격 설정*/
+}
+
 
 #header-center,div#GMdong{ /*divid에있는 태그에 css설정을 적용, 여러태그 가능함 div태그 생략하고 #만 적어도됨, 단 div가 아닌애들은 꼭 적어주기*/
 margin: 0 auto; /*가운데정렬을하고*/
 width: 1130px; /*너비는 1130으로 해라*/
+}
+
+#header-top {
+    float: right;
+}
+
+#header-top span{
+    color: #888; /*두글자씩 같은경우에는 코드를줄일수있따 ex aabbcc > abc 888888 > 888*/
+    letter-spacing: -1px; /*레터스페이싱 글자사이간격*/
+    font-size: 11px; /*글자크기*/
+    line-height: 22px; /*글자라인세로크기간격 조절  너무작게하면 글자들이 세로로 겹침.*/
+}
+
+#header-search {
+    clear: both;
+    padding-top: 20px; /*네이버 검색창 패딩창 늘리기, (네이버시작페이지하고 검색창 간격 위로 조금 넒힐떄 썻음)*/
 }
 
 #header-search a {
@@ -62,8 +85,8 @@ width: 1130px; /*너비는 1130으로 해라*/
     vertical-align: middle;
     /*HTML/CSS 무료 강좌 3-2. 백그라운드와 박스 모델 에 크기 쉽게 조정하는법 나와있음 참고하셈*/
     position: relative; /*픽셀만큼 포지션을 조정할수잇음*/
-    top: 4px;
-    right: -9px;
+    top: 2px;
+    right: -135px;
 }
 
 /*
@@ -82,7 +105,7 @@ width: 1130px; /*너비는 1130으로 해라*/
 
 
 #header-search fieldset {
-    margin-left: 20px;
+    margin-left: 165px;
 /*  paddintg-top: 12px;
     padding-bottom: 12px;
     padding-left: 20px;
@@ -97,6 +120,8 @@ width: 1130px; /*너비는 1130으로 해라*/
     position: relative; /*자기자신의 위치에 기반해서 움직이는 포지션종류*/
 
 }
+
+
 
 #header-search fieldset input {
     border: none; /*검색창안 인풋(글자적는곳) 테두리 없애기*/
@@ -128,9 +153,15 @@ width: 1130px; /*너비는 1130으로 해라*/
     margin: 14px; /*가운데 정렬해주기*/
 }
 
+nav {
+    height: 46px;
+    border-top: 1px solid #f1f3f6; /*네이버메뉴 윗부분 선그어주기 dotted dushed 도있음(점선)*/
+    border-bottom: 1px solid #d1d8e4;
+}
 nav ul { /*리스트*/
+    display: inline-block;
     margin: 0; /*마진 패딩 없애는 구문*/
-    padding: 0;
+    padding: 16px 0 0 168px;
     list-stlye: none; /*리스트옆에 점 뺴는 구문*/
 }
 
@@ -233,4 +264,24 @@ nav li:nth-child(15) span:first-child { /**네브태크 4번쨰자식인 리스�
 nav li:nth-child(16) span:first-child { /**네브태크 4번쨰자식인 리스트안에서 첫번쨰 자식인 spen 을 선택.**/
     width: 35px;
     background-position: -279px 0px;
+}
+
+.nav-divder { /*웹툰 옆에 구분선 설정*/
+    display: inline-block;
+    margin: 18px 16px 0;
+    width: 1px;
+    height: 14px;
+    background: #ebeef3;
+}
+
+#search-ranking {
+    position: absolute; /*동재 위치를 오른쪽 정렬했음*/
+    top: 165px;
+    right: 78px;
+}
+
+#rank-number { /*동재 옆에 있는 숫자 css*/
+    margin-top: -9px;
+    color: #00ab33;
+    font-size: 16px;
 }

@@ -27,18 +27,17 @@
   </head>
   <body>
   <header>
-    <div id="fixed">고정</div>
     <div class="center-align">
       <!--css은 항상 속성명 : 속성값;(속성여러개일경우 세미콜론으로 구분) 의 형태를 취하고잇음-->
       <!--어떤구역인지 알려주고 틀을잡는역활함... header 태그는  div id="header"태그 랑 같다.-->
       <!--디자인 설정방법 : <div 속성명 속성값; 속성명2: 속성값2> </div>-->
       <!--html파일안에 디자인을      하는스타일을 인라인 스타일 이라고 함 -->
-      <span> <!--text 같은 div는 div대신 spen 으로 씀-->
-        <span style="display: inline-block">네이버를 시작페이지로</span>
-        <span style="display: inline-block">쥬니버네이버</span>
-        <span style="display: inline-block">해피빈</span>
-      </span>
-      <div id = "header-search">
+      <div id="header-top"> <!--text 같은 div는 div대신 span 으로 씀-->
+        <span style="display: inline-block">네이버를 시작페이지로 I</span>
+        <span style="display: inline-block">쥬니버네이버 I</span>
+        <span style="display: inline-block">해피빈 I</span>
+      </div>
+      <div id = "header-search" style="clear: both;"> <!--네이버검색창이 위 header-top 의 영역을 침범하지않게하도록함-->
         <a href="https://www.naver.com">
           <h1>
             <span>네이버</span>  <!--특정 주소로 가는 밑줄 생성-->
@@ -59,6 +58,11 @@
   <!--    <ol> ordered list 숫자 1. 2. 3. ... 이렇게 정렬하는 리스트-->
   <nav> <!--어떤구역인지 알려주고 틀을잡는역활함... nav 태그는  div id="nav"태그 랑 같다.-->
      <div class="center-align">
+       <div id="search-ranking">
+         <h2 class="blind">실시간 검색어</h2>
+         <span id="rank-number">1</span>
+         <span>문재인</span>
+       </div>
         <ul> <!--unordered list--> <!--여기서 부터 리스트야-->
           <li>
             <a href="https://mail.naver.com">
@@ -82,10 +86,11 @@
           <li><a href="https://book.naver.com/"><span></span><span class="blind">책</span></a></li>
           <li><a href="https://comic.naver.com/index.nhn"><span></span><span class="blind">웹툰</span></a></li>
         </ul>
-     </div>
+       <div class="nav-divder"></div> <!--웹툰옆에 구분선-->
+       <!--div.nav-divider 치고 er뒤에 커서 갇다놓고 탭누르면 자동으로 nav-divider div 클래스 를 만들어줌-->
+       </div>
   </nav>
   <main> <!--어떤구역인지 알려주고 틀을잡는역활함.. main 태그는  div id="main"태그 랑 같다.-->
-    <h2>실시간 검색어</h2>
     <h3>로그인</h3>
     <h3>뉴스</h3>
     <h3>연합뉴스</h3>
