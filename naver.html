@@ -16,6 +16,7 @@
 <!--<textarea></textarea> 상자안에 글자넣을수잇게함 (상자크기 자유 롭게 조정가능)-->
 <!--Ctrl + shift + r 단어 바꾸기 -->
 <!--특정단어 드래그 후 ait + j 하면 그 특정단어만 골라서 순차적으로 선택됨 -->
+<!--양쪽으로 html css 화면 띄우는법 위 아이콘 오른쪽클릭 > split right-->
 
 <!doctype HTML>
 <html lang="ko">
@@ -45,8 +46,10 @@
         </a>
         <h2 class="blind">검색창</h2>
         <fieldset> <!--상자모양 생성-->
-          <legend class="blind">검 색</legend>  <!--상자모양 안에 "검색" 이라는 표시 달기-->
+          <legend class="blind">검색</legend>  <!--상자모양 안에 "검색" 이라는 표시 달기-->
           <input /> <!--상자안에 글자를 넣을수있게함-->
+          <span id="search-keyboard"></span>
+          <span id="search-history"></span>
           <button>
             <span class="blind">검색</span>
             <span id="search-image"></span>
@@ -61,7 +64,7 @@
        <div id="search-ranking">
          <h2 class="blind">실시간 검색어</h2>
          <span id="rank-number">1</span>
-         <span>문재인</span>
+         <span>동재</span>
        </div>
         <ul> <!--unordered list--> <!--여기서 부터 리스트야-->
           <li>
@@ -90,30 +93,49 @@
        <!--div.nav-divider 치고 er뒤에 커서 갇다놓고 탭누르면 자동으로 nav-divider div 클래스 를 만들어줌-->
        </div>
   </nav>
-  <main> <!--어떤구역인지 알려주고 틀을잡는역활함.. main 태그는  div id="main"태그 랑 같다.-->
-    <h3>로그인</h3>
-    <h3>뉴스</h3>
-    <h3>연합뉴스</h3>
-    <ol>
-      <li> [긴급] 문재인 대통령 청와대에서 사망.. 사태 파악 나서</li>
-      <li> [속보] 재동이는 지금 일본에 거주중.. 환송 어덯게 하나</li>
-    </ol>
-    <h3>언론사목록</h3>
-    <ul>
-      <li><img src="./kbs뉴스.png" alt="kbs뉴스"></li>
-      <li><img src="./sbs뉴스.png" alt="sbs뉴스"></li>
-      <li><img src="./머니투데이.gif" alt="머니투데이"></li>
-    </ul>
-    <b>굶은글씨</b>
-    <span>얆은글씨</span>
-    <h3>법률</h3>
-    <h3>쇼핑</h3>
-    <h3>쇼핑</h3>
-    <h6>쇼핑</h6>
-    <h6>쇼핑</h6>
-    <h6>쇼핑</h6>
-    <h6>쇼핑</h6>
-  </main>
+<main> <!--어떤구역인지 알려주고 틀을잡는역활함.. main 태그는  div id="main"태그 랑 같다.-->
+    <div id="main-centered" class="center-align">
+      <div>
+        <div id="main-ad"></div>
+        <div id="main-login">
+          <h3>로그인</h3>
+        </div>
+      </div>
+      <div>
+        <div id="main-ytn">
+          <h3>연합뉴스</h3>
+          <ol>
+            <li> [긴급] 트럼프 사망.. 사태 파악 나서</li>
+            <li> [속보] 코로나 바이러스 18시기준 확진자 1000명</li>
+          </ol>
+        </div>
+        <div id="main-newsstand">
+          <h3>뉴스스탠드</h3>
+          <ul>
+          <li><img src="./kbs뉴스.png" alt="kbs뉴스"></li>
+          <li><img src="./sbs뉴스.png" alt="sbs뉴스"></li>
+          <li><img src="./머니투데이.gif" alt="머니투데이"></li>
+          </ul>
+          <div id="main-weather"></div>
+          <div id="main-second-ad"></div>
+        </div>
+      </div>
+      <div>
+        <div id="main-category">
+          <h3>주제별 보기</h3>
+        </div>
+        <div id="main-shopping">
+          <h3>쇼핑</h3>
+        </div>
+      </div>
+      <div>
+        <div id="main-event">
+          <h3>이벤트</h3>
+        </div>
+        <div id="main-third-ad"></div>
+      </div>
+    </div>
+</main>
   <footer> <!--어떤구역인지 알려주고 틀을잡는역활함... footer 태그는  div id="footer"태그 랑 같다.-->
     <div>공지사항</div>
     <div>회사소개</div>

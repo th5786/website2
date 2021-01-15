@@ -10,8 +10,11 @@
 
 html, body {
     margin : 0; /*기본웹사이트 body에 마진 8px가 있는데 그걸없애줌(보더테두리 밖 공간)*/
-    padding: 0;
     font-family: dotum,'돋움',helvetica,"Apple SD Gothic Neo",sans-serif; /*폰트설정, dotum이 없으면 그뒤 없으면 그뒤..순서로 적용됨*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
 
 #fixed {
@@ -37,8 +40,9 @@ html, body {
 
 .center-align {
     margin: 0 auto;
-    width: 1080px;
+    width: 1600px;
     display: inline-block;
+/*    여기서 width은 적용이안됨, 같은 main 클래스에 div id ="main-centered" 가 더 우선순위가 높기떄문에*/
 }
 
 header {
@@ -48,7 +52,7 @@ header {
 
 #header-center,div#GMdong{ /*divid에있는 태그에 css설정을 적용, 여러태그 가능함 div태그 생략하고 #만 적어도됨, 단 div가 아닌애들은 꼭 적어주기*/
 margin: 0 auto; /*가운데정렬을하고*/
-width: 1130px; /*너비는 1130으로 해라*/
+width: 1495px; /*너비는 1130으로 해라*/
 }
 
 #header-top {
@@ -85,8 +89,8 @@ width: 1130px; /*너비는 1130으로 해라*/
     vertical-align: middle;
     /*HTML/CSS 무료 강좌 3-2. 백그라운드와 박스 모델 에 크기 쉽게 조정하는법 나와있음 참고하셈*/
     position: relative; /*픽셀만큼 포지션을 조정할수잇음*/
-    top: 2px;
-    right: -135px;
+    top: 0px;
+    right: -435px;
 }
 
 /*
@@ -105,15 +109,15 @@ width: 1130px; /*너비는 1130으로 해라*/
 
 
 #header-search fieldset {
-    margin-left: 165px;
+    margin-left: 454px;
 /*  paddintg-top: 12px;
     padding-bottom: 12px;
     padding-left: 20px;
     padding-right: 0px;
 */
     padding: 12px 0 12px 10px; /*위 오른쪽 아래쪽 왼쪽(시계방향)*/
-    width: 521px;
-    height: 51px;
+    width: 582px;
+    height: 52px;
     display: inline-block;
     border: 2px solid #03cf5d; /*보더굶기 2px , 상자 테두리 색깔설정 RGB, hex표기법,*/
     vertical-align: middle;
@@ -143,6 +147,34 @@ width: 1130px; /*너비는 1130으로 해라*/
 
 }
 
+#search-keyboard {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    background-repeat: no-repeat;
+    background-position: -30px -59px;
+    width: 25px;
+    height: 12px;
+    display: inline-block;
+    margin: 0 6px; /*(위 오른쪽 아래 왼쪽) 인데 여기서 아래 왼쪽은 같으니까 아래왼쪽은 생략된 상태로 적음*/
+    position: absolute;
+    top: 17px;
+    right: 73px;
+    vertical-align: middle; /*인라인블록이나 인라인인 2개 가운데 정렬되게 함 나란히맞추기*/
+}
+
+#search-history {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg);
+    background-repeat: no-repeat;
+    background-position: -87px -60px;
+    width: 10px;
+    height: 5px;
+    display: inline-block;
+    margin: 0 6px;
+    position: absolute;
+    top: 22px;
+    right: 55px;
+    vertical-align: middle; /*줄여서 vm 치고 엔터해도 이코드가 나옴*/
+}
+
 #search-image {
     background-image: url(./sp_search3.png);
     background-position: -4px -60px;
@@ -161,7 +193,7 @@ nav {
 nav ul { /*리스트*/
     display: inline-block;
     margin: 0; /*마진 패딩 없애는 구문*/
-    padding: 16px 0 0 168px;
+    padding: 16px 0 0 442px;
     list-stlye: none; /*리스트옆에 점 뺴는 구문*/
 }
 
@@ -276,12 +308,104 @@ nav li:nth-child(16) span:first-child { /**네브태크 4번쨰자식인 리스�
 
 #search-ranking {
     position: absolute; /*동재 위치를 오른쪽 정렬했음*/
-    top: 165px;
-    right: 78px;
+    top: 166px;
+    right: 308px;
 }
 
 #rank-number { /*동재 옆에 있는 숫자 css*/
     margin-top: -9px;
     color: #00ab33;
     font-size: 16px;
+}
+
+main {
+    background-color: #f2f4f7;
+    display: inline-block;
+    width: 100%;
+    padding: 0px 0 0px 428px; /*위 오른쪽 아래쪽 왼쪽(시계방향)*/
+}
+
+#main-centered {
+    padding: 8px 10px 0; /*메인에 패딩을줘서 main 컨텐츠 테두리 밖에 살작 여유가공간이생김,*/
+    width: 1110px;
+}
+
+main h3:nth-child(3) { /*이건 h태그와 따른 잡태그도 순서를 봐서 css적용을 시킨것임.*/
+    background: red;
+}
+
+main h3:nth-of-type(2) { /*이건 h태그만비교하는것임*/
+    background: greenyellow;
+}
+
+#main-ad {
+    display: inline-block;
+    width: 740px;
+    height: 120px;
+    background: #555;
+}
+
+#main-login {
+    display: inline-block;
+    width: 332px;
+    height: 120px;
+    vertical-align: top; /*로그인과 main-ad과 가로 대칭이 안되는데 이코드가 위로 끌어다 올려줌,*/
+    background-color: white;
+}
+
+#main-ytn {
+    display: inline-block;
+    width: 740px;
+    height: 246px;
+    background-color: white;
+}
+
+#main-newsstand {
+    display: inline-block;
+    width: 332px;
+    height: 120px;
+    background-color: white;
+}
+
+#main-weather {
+    display: inline-block;
+    width: 332px;
+    height: 142px;
+    background-color: white;
+}
+
+#main-second-ad {
+    display: inline-block;
+    width: 332px;
+    height: 150px;
+    background: #555;
+}
+
+#main-category {
+    display: inline-block;
+    width: 740px;
+    height: 837px;
+    background-color: white;
+}
+
+#main-shopping {
+    display: inline-block;
+    width: 740px;
+    height: 837px;
+    background-color: white;
+}
+
+#main-event {
+    display: inline-block;
+    width: 740px;
+    height: 130px;
+    background-color: white;
+    vertical-align: top;
+}
+
+#main-third-ad {
+    display: inline-block;
+    width: 332px;
+    height: 130px;
+    background-color: #555555;
 }
