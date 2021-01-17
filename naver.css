@@ -345,13 +345,13 @@ main h3:nth-of-type(2) { !*이건 h태그만비교하는것임*!
 
 
 #main-ad {
-    float: left; /*이 플롯두개를 인식하기위해서 부모에 overflow: outo 아니면 인라인블럭width100%줘야됨*/
     display: inline-block;
     width: 740px;
     height: 120px;
-    background: #555;
+    background: #556;
     margin-right: 6px;
     margin-bottom: 8px;
+    float: left; /*이 플롯두개를 인식하기위해서 부모에 overflow: outo 아니면 인라인블럭width100%줘야됨*/
 }
 
 #main-login {
