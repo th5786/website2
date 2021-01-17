@@ -34,11 +34,11 @@
       <!--디자인 설정방법 : <div 속성명 속성값; 속성명2: 속성값2> </div>-->
       <!--html파일안에 디자인을      하는스타일을 인라인 스타일 이라고 함 -->
       <div id="header-top"> <!--text 같은 div는 div대신 span 으로 씀-->
-        <span style="display: inline-block">네이버를 시작페이지로 I</span>
-        <span style="display: inline-block">쥬니버네이버 I</span>
-        <span style="display: inline-block">해피빈 I</span>
+        <span>네이버를 시작페이지로 I</span>
+        <span>쥬니버네이버 I</span>
+        <span>해피빈 I</span>
       </div>
-      <div id = "header-search" style="clear: both;"> <!--네이버검색창이 위 header-top 의 영역을 침범하지않게하도록함-->
+      <div id = "header-search"> <!--네이버검색창이 위 header-top 의 영역을 침범하지않게하도록함-->
         <a href="https://www.naver.com">
           <h1>
             <span>네이버</span>  <!--특정 주소로 가는 밑줄 생성-->
@@ -58,9 +58,8 @@
       </div>
     </div>
   </header>
-  <!--    <ol> ordered list 숫자 1. 2. 3. ... 이렇게 정렬하는 리스트-->
   <nav> <!--어떤구역인지 알려주고 틀을잡는역활함... nav 태그는  div id="nav"태그 랑 같다.-->
-     <div class="center-align">
+     <div class="center-align relative">
        <div id="search-ranking">
          <h2 class="blind">실시간 검색어</h2>
          <span id="rank-number">1</span>
@@ -69,7 +68,7 @@
         <ul> <!--unordered list--> <!--여기서 부터 리스트야-->
           <li>
             <a href="https://mail.naver.com">
-              <span></span>
+              <span class="nav-item-mail"></span>
               <span class="blind">메일</span>
             </a>
           </li>
@@ -91,36 +90,58 @@
         </ul>
        <div class="nav-divder"></div> <!--웹툰옆에 구분선-->
        <!--div.nav-divider 치고 er뒤에 커서 갇다놓고 탭누르면 자동으로 nav-divider div 클래스 를 만들어줌-->
+        <ui>
+          <li class="more"><a href=""><span></span><span class="blind">더보기</span></a></li>
+        </ui>
        </div>
   </nav>
 <main> <!--어떤구역인지 알려주고 틀을잡는역활함.. main 태그는  div id="main"태그 랑 같다.-->
     <div id="main-centered" class="center-align">
-      <div>
-        <div id="main-ad"></div>
+      <div id="main-first-block">
+        <div id="main-ad">광고입니다</div>
         <div id="main-login">
           <h3>로그인</h3>
         </div>
       </div>
-      <div>
-        <div id="main-ytn">
-          <h3>연합뉴스</h3>
-          <ol>
-            <li> [긴급] 트럼프 사망.. 사태 파악 나서</li>
-            <li> [속보] 코로나 바이러스 18시기준 확진자 1000명</li>
-          </ol>
+      <div id="main-second-block">
+        <div class="inline-block">
+          <div id="main-ytn">
+            <h3>연합뉴스</h3>
+            <ol>
+              <li> [긴급] 트럼프 사망.. 사태 파악 나서</li>
+            </ol>
+          </div>
+          <div id="main-newsstand">
+            <h3>뉴스스탠드</h3>
+              <ul>
+                <li><img src="./과학동아.png" alt="과학동아" /></li>
+                <li><img src="./한국일보.png" alt="한국일보" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+                <li><img src="./과학동아.png" alt="과학동아" /></li>
+                <li><img src="./한국일보.png" alt="한국일보" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+                <li><img src="./과학동아.png" alt="과학동아" /></li>
+                <li><img src="./한국일보.png" alt="한국일보" /></li>
+                <li><img src="./osen.png" alt="osen" /></li>
+                <li><img src="./매일경제.png" alt="매일경제" /></li>
+                <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+                <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+              </ul>
+          </div>
         </div>
-        <div id="main-newsstand">
-          <h3>뉴스스탠드</h3>
-          <ul>
-          <li><img src="./kbs뉴스.png" alt="kbs뉴스"></li>
-          <li><img src="./sbs뉴스.png" alt="sbs뉴스"></li>
-          <li><img src="./머니투데이.gif" alt="머니투데이"></li>
-          </ul>
-          <div id="main-weather"></div>
-          <div id="main-second-ad"></div>
-        </div>
-      </div>
-      <div>
+          <div class="inline-block">
+            <div id="main-weather">날씨입니다..!</div>
+            <div id="main-second-ad">2번째 광고입니다!</div>
+          </div>
+        </div>  <!--오류 : /div 닫는갯수가 달라서 밑에div떄문에 주제별 카테코리가 왼쪽정렬되는 오류가잇엇음, 잘확인해볼것,-->
+<!--      </div>-->
+      <div id="main-third-block">
         <div id="main-category">
           <h3>주제별 보기</h3>
         </div>
@@ -128,11 +149,11 @@
           <h3>쇼핑</h3>
         </div>
       </div>
-      <div>
+      <div id="main-fourth-block" class="center-align">
         <div id="main-event">
           <h3>이벤트</h3>
         </div>
-        <div id="main-third-ad"></div>
+        <div id="main-third-ad">3번째 광고입니다!</div>
       </div>
     </div>
 </main>
